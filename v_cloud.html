@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./v_cloud.css">
+    <title>호텔 기본 정보</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">호텔 기본 정보</a></li>
+                    <li><a href="./faq.html">F.A.Q</a></li>
+                    <li><a href="./cs.html">고객응대방법</a></li>
+                    <li><a href="./pics.html">사진</a></li>
+                    <li><a href="./videos.html">동영상</a></li>
+                    <li><a href="./v_cloud.html">V-Cloud 매뉴얼</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="title">
+                <h1>V-클라우드 매뉴얼</h1>
+            </div>
+            <div class="contents_inform">
+                <h3>
+                    <select title="slide" name="slides" id="slide_index">
+                        <option value="01"><p>표지</p></option>
+                        <option value="02"><p>01. 로그인 및 회원 정보 수정</p></option>
+                        <option value="03"><p>02. 관리 메뉴 이동</p></option>
+                        <option value="04"><p>03. 주요 메뉴 안내</p></option>
+                        <option value="05"><p>04. 예약 하기</p></option>
+                        <option value="06"><p>05. 객실 배정하기(1) </p></option>
+                        <option value="07"><p>06. 객실 배정하기(2)</p></option>
+                        <option value="08"><p>07. 객실 체크인 관리</p></option>
+                        <option value="09"><p>08. 객실 변경 관리</p></option>
+                        <option value="10"><p>09. 예약 취소/환불관리(1)</p></option>
+                        <option value="11"><p>10. 예약 취소/환불관리(2) </p></option>
+                        <option value="12"><p>11. 예약 취소/환불관리(3) </p></option>
+                        <option value="13"><p>12. 성인 인증관리</p></option>
+                        <option value="14"><p>13. 성인 인증(키오스크 1)</p></option>
+                        <option value="15"><p>14. 성인 인증(키오스크 2)</p></option>
+                        <option value="16"><p>엔딩</p></option>
+                    </select>
+                        
+                </h3>
+                <table class="informs inform1">
+                    <tr>
+                        <td class="imgs"><img src="./images/slide01.jpg" alt="slide01"></td>
+                    </tr>
+                </table>  
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <script>
+        let slide_el = document.querySelector("select");
+        let img_el = document.querySelector('img');
+        console.log(slide_el.value)
+        slide_el.addEventListener("change", () =>{
+            console.log(slide_el.value)
+            img_el.src = `./images/slide${slide_el.value}.jpg`
+        })
+    </script>
+</body>
+</html>
